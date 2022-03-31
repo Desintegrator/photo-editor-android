@@ -16,6 +16,11 @@ buildscript {
     }
 }
 
+plugins {
+    id "java"
+    id 'maven-publish'
+}
+
 allprojects {
     repositories {
         mavenCentral()
@@ -26,6 +31,17 @@ allprojects {
     }
 }
 
-task clean(type: Delete) {
-    delete rootProject.buildDir
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from(components.java)
+        }
+    }
+    repositories {
+        mavenLocal()
+    }
 }
+
+// task clean(type: Delete) {
+//     delete rootProject.buildDir
+// }
