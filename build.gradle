@@ -21,6 +21,8 @@ plugins {
     id 'maven-publish'
 }
 
+group='com.github.Desintegrator'
+
 allprojects {
     repositories {
         mavenCentral()
