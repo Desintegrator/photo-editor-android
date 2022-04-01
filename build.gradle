@@ -36,6 +36,10 @@ allprojects {
 publishing {
     publications {
         mavenJava(MavenPublication) {
+            groupId = 'com.github.Desintegrator'
+            artifactId = 'photo-editor-android'
+            version = '2.2'
+
             from(components.java)
         }
     }
